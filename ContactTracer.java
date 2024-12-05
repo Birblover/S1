@@ -1,6 +1,6 @@
 /**************************
  * Author: Christian Duncan (Starting Code)
- * Modified by: <TEAM MEMBERS>
+ * Modified by: Zoe McLaughlin, 
  * 
  * Fall 2024, CSC215
  * Given a graph of contact points between individuals, a list of infected individuals, 
@@ -10,6 +10,7 @@
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class ContactTracer {
@@ -35,13 +36,15 @@ public class ContactTracer {
 
             // Get the number of names (IDs)
             int n = Integer.parseInt(sc.nextLine());
+            HashMap<String, Integer> idMap = new HashMap<String, Integer>();
 
             for (int i = 0; i < n; i++) {
                 String id = sc.nextLine();
                 System.out.println("DEBUG: Node " + i + ": ID=" + id);
+                idMap.put(id, i);
 
                 // You will want to store this ID. 
-                // Using a Hashmap, I would map ID to i, call it the id number.
+                // Using a Hashmap, I would map ID to i, call it the id number. DONE
             }
 
             // You will probably want to create an undirected graph G with n nodes
